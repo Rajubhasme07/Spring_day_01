@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+      
+     <!--  Setter_injection -->
+      
+      <bean id="add" class="pojo.Address">
+          
+       <property name="cus_a_code" value="22"></property>   
+          <property name="cus_str_add" value="Bhande square"></property>   
+          
+      </bean>     
+      
+      
+      
+      
+    <!--  Constructor_injection -->
+    <bean id="cus" class="pojo.Customer">
+     <constructor-arg value="1" type="int"> </constructor-arg>  
+     <constructor-arg value="Anuj"> </constructor-arg>  
+     <constructor-arg ref="add"> </constructor-arg>  
+      
+    </bean>
+    
+                </beans>
